@@ -1,0 +1,13 @@
+{
+  "title": "AI Error Assistant",
+  "uid": "error-assistant",
+  "panels": [
+    {"type":"graph","title":"Request Rate (RPS)","gridPos":{"x":0,"y":0,"w":12,"h":8},
+     "targets":[{"expr":"rate(http_requests_total[1m])","legendFormat":"RPS"}]},
+    {"type":"graph","title":"Response Time p95","gridPos":{"x":12,"y":0,"w":12,"h":8},
+     "targets":[{"expr":"histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))","legendFormat":"p95"}]},
+    {"type":"singlestat","title":"Total Analyses","gridPos":{"x":0,"y":8,"w":6,"h":4},
+     "targets":[{"expr":"http_requests_total{handler=\"/api/analyze\"}"}]}
+  ],
+  "schemaVersion":16,"version":1
+}

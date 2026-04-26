@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.bin
+*.gguf
+postgres_data/
+redis_data/
+grafana_data/
+prometheus_data/
+.DS_Store
+*.md
+logs/
+data/
