@@ -10,6 +10,5 @@ redis_data/
 grafana_data/
 prometheus_data/
 .DS_Store
-*.md
 logs/
 data/
